@@ -222,7 +222,13 @@ explore: persons {}
 
 explore: persons2 {}
 
-explore: products {}
+explore: products {
+  join: orders {
+    type: left_outer
+    sql_on: ${products.id} = ${orders.id} ;;
+    relationship: many_to_one
+  }
+}
 
 explore: salary {
   join: dept {
