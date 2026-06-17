@@ -74,11 +74,11 @@ view: order_items {
     label:  "Split Dimension"
     sql:  CASE
             WHEN {% parameter split_parameter %} = 'no_split'         THEN ""
-            WHEN {% parameter split_parameter %} = 'cz'               THEN CAST(${products.brand} AS STRING)
-            WHEN {% parameter split_parameter %} = 'is_subscriber'    THEN CAST(${products.category} AS STRING)
-            WHEN {% parameter split_parameter %} = 'loyal_payer'      THEN CAST(${products.department} AS STRING)
-            WHEN {% parameter split_parameter %} = 'regular_customer' THEN CAST(${products.retail_price} AS STRING)
-            WHEN {% parameter split_parameter %} = 'tenure'           THEN CAST(${products.rank} AS STRING)
+            WHEN {% parameter split_parameter %} = 'cz'               THEN CAST(${products.brand} AS CHAR)
+            WHEN {% parameter split_parameter %} = 'is_subscriber'    THEN CAST(${products.category} AS CHAR)
+            WHEN {% parameter split_parameter %} = 'loyal_payer'      THEN CAST(${products.department} AS CHAR)
+            WHEN {% parameter split_parameter %} = 'regular_customer' THEN CAST(${products.retail_price} AS CHAR)
+            WHEN {% parameter split_parameter %} = 'tenure'           THEN CAST(${products.rank} AS CHAR)
             ELSE ""
           END ;;
   }
