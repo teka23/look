@@ -73,16 +73,16 @@ view: products {
   dimension: split_dimension {
     view_label: "Parameters"
     type: string
-    label:  "Split Dimension  "
+    label:  "Split Dimension"
     sql:  CASE
-            {% parameter split_parameter %}
-              WHEN 'no_split'                   THEN CAST("" AS STRING)
-              WHEN 'cz'                         THEN CAST(${products.brand} AS STRING)
-              WHEN 'is_subscriber'              THEN CAST(${products.category} AS STRING)
-              WHEN 'loyal_payer'                THEN CAST(${products.department} AS STRING)
-              WHEN 'regular_customer'           THEN CAST(${products.retail_price} AS STRING)
-              WHEN 'tenure'                     THEN CAST(${products.rank} AS STRING)
-          END  ;;
+            WHEN '{% parameter split_parameter %}' = 'no_split'         THEN ""
+            WHEN '{% parameter split_parameter %}' = 'cz'               THEN CAST(${products.brand} AS STRING)
+            WHEN '{% parameter split_parameter %}' = 'is_subscriber'    THEN CAST(${products.category} AS STRING)
+            WHEN '{% parameter split_parameter %}' = 'loyal_payer'      THEN CAST(${products.department} AS STRING)
+            WHEN '{% parameter split_parameter %}' = 'regular_customer' THEN CAST(${products.retail_price} AS STRING)
+            WHEN '{% parameter split_parameter %}' = 'tenure'           THEN CAST(${products.rank} AS STRING)
+            ELSE ""
+          END ;;
   }
   measure: count {
     type: count
