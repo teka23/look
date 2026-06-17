@@ -77,11 +77,11 @@ view: products {
     sql:  CASE
             {% parameter split_parameter %}
               WHEN 'no_split'                   THEN CAST("" AS STRING)
-              WHEN 'cz'                         THEN CAST(${brand} AS STRING)
-              WHEN 'is_subscriber'              THEN CAST(${brand} AS STRING)
-              WHEN 'loyal_payer'                THEN CAST(${brand} AS STRING)
-              WHEN 'regular_customer'           THEN CAST(${brand} AS STRING)
-              WHEN 'tenure'                     THEN CAST(${brand} AS STRING)
+              WHEN 'cz'                         THEN CAST(${products.brand} AS STRING)
+              WHEN 'is_subscriber'              THEN CAST(${products.category} AS STRING)
+              WHEN 'loyal_payer'                THEN CAST(${products.department} AS STRING)
+              WHEN 'regular_customer'           THEN CAST(${products.retail_price} AS STRING)
+              WHEN 'tenure'                     THEN CAST(${products.rank} AS STRING)
           END  ;;
   }
   measure: count {
