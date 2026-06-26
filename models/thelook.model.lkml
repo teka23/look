@@ -1,7 +1,7 @@
 connection: "thelook"
 
 # include all the views
-include: "//mtr_fernando_valenzuela_testing/views/test_project_import.view.lkml"
+include: "//mtr_fernando_valenzuela_testing/test_project_import.view.lkml"
 #testing
 
 datagroup: thelook_default_datagroup {
