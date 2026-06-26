@@ -11,3 +11,7 @@ visualization: {
   label: "MyMultipleValue"
   file: "viz/multiplevalue.js"
 }
+
+local_dependency: {
+  project: "dafneg_test_thelook"
+}
