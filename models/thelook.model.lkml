@@ -1,7 +1,8 @@
 connection: "thelook"
 
 # include all the views
-include: "//dafneg_test_thelook/views/**/*.view.lkml"
+include: "//mtr_fernando_valenzuela_testing/views/test_project_import.view.lkml"
+#testing
 
 datagroup: thelook_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;

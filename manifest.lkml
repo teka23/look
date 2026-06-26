@@ -13,5 +13,5 @@ visualization: {
 }
 
 local_dependency: {
-  project: "dafneg_test_thelook"
+  project: "mtr_fernando_valenzuela_testing"
 }
