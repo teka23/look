@@ -15,3 +15,8 @@ visualization: {
 local_dependency: {
   project: "mtr_fernando_valenzuela_testing"
 }
+
+remote_dependency: chris_test_git {
+  url: "git@github.com:Kruncha/test_create_project.git"
+  ref: "master"
+}
