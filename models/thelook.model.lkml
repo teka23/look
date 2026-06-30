@@ -1,5 +1,6 @@
 connection: "thelook"
 
+# bling
 # include all the views
 include: "//mtr_fernando_valenzuela_testing/views/test_project_import/*.view.lkml"
 #testing
