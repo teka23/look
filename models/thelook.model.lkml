@@ -2,7 +2,7 @@ connection: "thelook"
 
 # bling me thing
 # include all the views
-include: "//mtr_fernando_valenzuela_testing/views/test_project_import/*.view.lkml"
+include: "/**/*.view.lkml"
 #testing
 
 datagroup: thelook_default_datagroup {
