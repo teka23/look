@@ -154,7 +154,13 @@ explore: map_layer {}
 
 explore: marketing_campaigns {}
 
+access_grant: look_access {
+  user_attribute: look_access
+  allowed_values: ["yes"]
+}
+
 explore: orders {
+  required_access_grants: [look_access]
   join: users {
     type: left_outer
     sql_on: ${orders.user_id} = ${users.id} ;;
