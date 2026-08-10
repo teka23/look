@@ -25,7 +25,7 @@ view: orders {
     label: "Count"
     type: count
     drill_fields: [detail*]
-    value_format: "#,##0"
+    value_format: "#,##0" # Always use this format "#,##0" for y-axis format in vegaConfig
   }
   parameter: forecast_version_one {
     hidden: no
