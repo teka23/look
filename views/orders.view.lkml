@@ -22,9 +22,10 @@ view: orders {
     sql: ${TABLE}.user_id ;;
   }
   measure: count {
-    label: "{{ forecast_version_one._parameter_value | remove: \"'\" | replace: 'p', '+' }} FC 000"
+    label: "Count"
     type: count
     drill_fields: [detail*]
+    value_format: "#,##0"
   }
   parameter: forecast_version_one {
     hidden: no
